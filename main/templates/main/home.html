@@ -24,6 +24,9 @@
             {{ form.as_p }}
             <button type="submit" name="save">Create New</button>
         </form>
+        {% if shortened_url %}
+            <h1>Your link: {{ shortened_url }}</h1>
+        {% endif %}
     </div>
   </div>
 </body>
