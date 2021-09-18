@@ -24,15 +24,15 @@
     <br>
     <br>
     <h1>Link Shortener</h1>
-    <div style="background-color: #414141; border-radius: 5px;" class="">
-        <form action="#" method="POST">
+    <div style="background-color: #414141; border-radius: 5px;;" class="">
+        <form action="" method="POST">
             {% csrf_token %}
             <br>
             {{ form.as_p }}
             <button class="btn btn-block btn-info" type="submit" name="save">Create Link</button>
         </form>
         {% if shortened_url %}
-            <h1><a href="{{shortened_url}}">Your Link</a></h1>
+            <h3><a style="color: rgb(89, 255, 227);" href="{{shortened_url}}">Your Link</a></h3>
         {% endif %}
     </div>
   </div>
