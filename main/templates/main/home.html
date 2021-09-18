@@ -19,7 +19,11 @@
     <br>
     <h1>Link Shortener</h1>
     <div style="background-color: grey;" class="">
-      test
+        <form action="#" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="save">Create New</button>
+        </form>
     </div>
   </div>
 </body>

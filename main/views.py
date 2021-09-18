@@ -1,9 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .forms import CreateLink
 
 # Create your views here.
 def home(response):
-    return render(response, "main/home.html", {})
-
-def test(response):
-    return render(response, "main/test.html", {})
+    if response.method == "POST":
+        form = CreateLink(response.POST)
+    else:
+        form = CreateLink()
+    return render(response, "main/home.html", {"form":form})
