@@ -1,0 +1,5 @@
+*.txt
+Procfile
+staticfiles
+__pycache__
+*.sqlite3
